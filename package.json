@@ -1,0 +1,13 @@
+{
+  "name": "projetoone",
+  "version": "1.0.0",
+  "description": "Class é oq eu preciso ter:\r New Cliente ,   é um novo cliente\r const cliente1   é uma instancia do new Cliente()",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Silas",
+  "license": "ISC",
+  "type": "module"
+}
