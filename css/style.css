@@ -1,0 +1,35 @@
+.button{
+    border:1px solid black;
+    background-color: black;
+    color:#ffffff;
+    padding:10px;
+    font-size: 23px;
+    border-radius: 20px;
+}
+/* MODIFIER do bloco button*/
+/* Modifier para coisas expecificas como
+cor , tamanho */
+.button--green{
+    background-color: green;
+}
+.button--blue{
+    background-color: blue;
+}
+.button--big{
+    padding: 15px;
+}
+
+.title{
+    font-size: 23px;
+    font-weight: bold;
+}
+.title--line{
+    text-decoration: underline;
+}
+.lista{
+    padding:0;
+}
+.lista__ball{
+    list-style: none;
+}
+
