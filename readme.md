@@ -15,7 +15,8 @@ MODULOS NO JAVASCRIPT
 Precisa está com a versão do nodejs v13 acima
 
 
-RODADNO NO TERMINAL COM NODE
+RODANDO NO TERMINAL COM NODE
+
 comando abaixo mostra o console.log no mesmo terminal
 node ./index.js
 
@@ -126,6 +127,45 @@ console.log(ContaCorrente.numeroDeContas);
 ===================================================================================================
 CURSO => JavaScript: Interfaces e Herança em Orientação a Objetos
 
+extends oq vc tem da class conta para a class ContaCorrente
+
+export class ContaCorrente extends Conta{
+
+}
+
+Precisa chamar o super constructor antes de chamar o this
+
+ constructor(saldoInicial, cliente, agencia){
+        //PRECISAMOS PASSAR O SUPER
+        super(saldoInicial,cliente,agencia)
+    }
+
+
+Para pegar duas funções ao mesmo tempo:
+uma no arquivo conta.js
+e outro arquivo contaCorrente.js
+
+No arquico que tem extends precisa colocar o super, para chamar o arquivo extends
+export class ContaCorrente extends Conta{
+    static numeroDeContas = 0;
+  
+    constructor(agencia, cliente){
+        super(0,agencia,cliente);
+        ContaCorrente.numeroDeContas += 1;
+    }
+    teste(){
+        super.teste();
+        console.log('teste na class conta corrente')
+    }
+}
+
+já no arquivo conta.js que está sendo extends
+
+   teste(){
+        console.log('conta')
+    }
+
+será executado depois!
 
 
 

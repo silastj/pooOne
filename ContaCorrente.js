@@ -1,46 +1,15 @@
-import {Cliente} from './Cliente.js'
-
-export class ContaCorrente{
-    static numeroDeContas = 0;
-  
-
-    set cliente(novoValor){
-        if(novoValor instanceof Cliente){
-            this._cliente = novoValor;
-        }
-    }
-    get cliente(){
-        return this._cliente;
-    }
-    get saldo(){
-        return this._saldo;
-    }
-    
+import {Conta} from './Conta.js'
+export class ContaCorrente extends Conta{
+    static numeroDeContas = 0;  
     constructor(agencia, cliente){
+        super(0,agencia,cliente);
         ContaCorrente.numeroDeContas += 1;
-        this.agencia = agencia;
-        this._cliente = cliente;
-        this._saldo = 0;
- 
     }
-
+    //SOBREESCREVENDO O COMPORTAMENTO DE SACAR
     sacar(valor){
-        if(this._saldo >= valor){
-            this._saldo -= valor;
-             return valor;
-        }
-    }
-
-    depositar(valor){
-        if(valor <= 0){
-            return;
-        }
-        this._saldo += valor;
-    }
-
-    transferir(valor, conta){
-        const valorSacado = this.sacar(valor);
-        conta.depositar(valorSacado);
-    }
-
+        let taxa = 1.1;
+        //USANDO O SUPER OU O THIS DÁ NA MESMA
+        return this._sacar(valor, taxa);
+        //SE NÃO ENTRAR NO IF ELE RETORNA SALDO 0
+}
 }
