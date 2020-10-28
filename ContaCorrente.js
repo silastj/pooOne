@@ -8,7 +8,7 @@ export class ContaCorrente extends Conta{
     //SOBREESCREVENDO O COMPORTAMENTO DE SACAR
     sacar(valor){
         let taxa = 1.1;
-        //USANDO O SUPER OU O THIS DÁ NA MESMA
+        //USANDO O SUPER OU O THIS DÁ NA MESMA NESSE BLOCO
         return this._sacar(valor, taxa);
         //SE NÃO ENTRAR NO IF ELE RETORNA SALDO 0
 }

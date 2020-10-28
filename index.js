@@ -9,7 +9,6 @@ new ContaCorrente();
 
 const contaCorrenteRicardo = new ContaCorrente(cliente1,1001 );
 const contaPoupanca = new ContaPoupanca(50,cliente1,1001);
-// const conta = new Conta(0, cliente1, 1002);
 
 contaCorrenteRicardo.depositar(400);
 
@@ -19,4 +18,3 @@ contaCorrenteRicardo.transferir(200, conta2);
 
 
 console.log(contaCorrenteRicardo);
-// console.log(conta);
