@@ -167,7 +167,20 @@ já no arquivo conta.js que está sendo extends
 
 será executado depois!
 
+=> CLASS ABSTRADA ( Método sobscrito )
+Nunca extanciada e sempre herdada, não pode chamar ela diretamente.
 
+=> OPERADOR in ( verificar se autenticar está dentro do autenticavel )
+
+"autenticar" in autenticavel
+
+=> VERIFICAR SE É UMA ESTANCIA DENTRO DE UMA FUNÇÃO
+ && autencicavel.autenticar instaceof Function
+
+=> DUCK TYPE E POLIMORFISMO , não importa o tipo, indepedente do tipo ele vai usar! se ele tiver a propriedade que eu vou usar, ele vai usar de x forma!
+Utilizando codigos e reutilizando codigos
+
+Encapsulamento  é muito importante, com os acessores get e set, metodos 
 
 
 
